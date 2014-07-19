@@ -22,3 +22,7 @@ Update page (update a record)
 Add a nav bar displaying; username, selected database, selected table, logout. 
 
 Implement logout function.
+
+Upgrade to secure php session.
+
+Protect against brute force attacks (not sure if necessary as loclahost only?)
