@@ -19,3 +19,6 @@ Read page (inspect a selected record more closely)
 
 Update page (update a record)
 
+Add a nav bar displaying; username, selected database, selected table, logout. 
+
+Implement logout function.
