@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <?php
+    require 'functions.php';
+    
     //start a session to store variables
     session_start();
+    if (isset($_GET['log_out'])) logOut();
+    
     //If no one is logged in, i.e. username and password are not set divert to login page to acquire login credentials
     if (!isset($_SESSION['username']) || !isset($_SESSION['password'])){
         header('Location: login.php');
@@ -26,8 +30,7 @@
 
 <table class="table table-striped table-bordered table-condensed table-hover">
 <thead>
-<tr>
-</tr>
+<tr></tr>
 </thead>
 <tbody>
 <tr>

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+    //bring in the functions file to utilise all the useful stuff
+    include 'functions.php';
+    if (isset($_GET['log_out'])) logOut();
+?>
 <html>
 <head>
 <title>TITLE</title>
@@ -9,7 +14,6 @@
 </head>
 
 <body>
-
 
 
 </tbody>

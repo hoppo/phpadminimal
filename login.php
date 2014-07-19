@@ -22,14 +22,15 @@
 <?php
     //open session to access session variables
     session_start();
+    
+    //if username hasn't been set then set it now
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
+    
     //check if username and password have been set in the session
     //if already set redivert to index.php (log out function to be implemented later)
     if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
         header('Location: index.php');
-    } else {
-        //if username hasn't been set then set it now
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
     }
 ?>
 
