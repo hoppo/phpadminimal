@@ -12,12 +12,18 @@
 <head>
 <title>PHPAdminimal</title>
 <meta charset="utf-8">
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="login.css" rel="stylesheet">
 <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+<?php
+    //include navbar code
+    require($DOCUMENT_ROOT . "navbar.html");
+?>
+
 <table class="table table-striped table-bordered table-condensed table-hover">
 <thead>
 <tr>
