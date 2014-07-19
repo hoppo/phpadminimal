@@ -7,8 +7,6 @@ phpmyadmin but without all the features. Please feel free to clone, change, comm
 Todo
 ----
 
-Login page (referee if index page requested and not logged in)
-
 Tables page (list of available tables within selected database)
 
 Table page (display selected table)
