@@ -1,4 +1,4 @@
-PHPMyAdminimal
+PHPAdminimal
 ==============
 
 This is a simple admin utility written in php for accessing and updating databases on the local host. A little like
