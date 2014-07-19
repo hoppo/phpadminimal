@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>PHPAdminimal</title>
 <!-- Include the bootstrap stylesheets -->
-<link href="login.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
