@@ -34,20 +34,21 @@
 </tr>
 
 <?php
-    
+    //include database classes
     include 'db_connect.php';
-    
+    //create database connection
     $con = Database::connect('localhost',$_SESSION['database'],$_SESSION['username'],$_SESSION['password']);
-    
+    //make query
     $query = ('SHOW TABLES');
-    
+    //parse query result into a table
     foreach($con->query($query)as $row)
     {
         echo '<tr><td>';
         echo '<a href="table.php?table='.$row[0].'">'.$row[0].'</a>';
         echo '</td></tr>';
     }
-    
+    //disconnect from database
+    $con = Database::disconnect();
 ?>
 
 </tbody>

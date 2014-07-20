@@ -20,11 +20,10 @@
     require($DOCUMENT_ROOT . "navbar.html");
 ?>
 
-Display table
 <?php
-$table = $_GET['table'];
-echo $table;
+    
 ?>
+
 </tbody>
 </table>
 </body>
