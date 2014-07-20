@@ -7,8 +7,6 @@ phpmyadmin but without all the features. Please feel free to clone, change, comm
 Todo
 ----
 
-Tables page (list of available tables within selected database)
-
 Table page (display selected table)
 
 Create page (create a new record)
