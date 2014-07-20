@@ -20,9 +20,17 @@
     require($DOCUMENT_ROOT . "navbar.html");
 ?>
 
-List of tables
+<table class="table table-striped table-bordered table-condensed table-hover">
+<thead>
+<tr></tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Table</b></td>
+</tr>
 
 <?php
+    
     include 'db_connect.php';
     $_SESSION['database'] = $_GET['db'];
     
