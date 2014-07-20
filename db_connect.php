@@ -33,7 +33,7 @@
             {
                 try
                 {
-                    self::$cont = new PDO( "mysql:host=".$host,";dbname=".$database, $username, $password);
+                    self::$cont = new PDO( "mysql:host=".$host.";"."dbname=".$database, $username, $password);
                 }
                 catch(PDOException $e)
                 {
