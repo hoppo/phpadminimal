@@ -28,8 +28,6 @@ List of tables
     
     $con = Database::connect('localhost',$_SESSION['database'],$_SESSION['username'],$_SESSION['password']);
     
-    //$con = new PDO('mysql:host=localhost;dbname=electronics',$_SESSION['username'],$_SESSION['password']);
-    
     $query = ('SHOW TABLES');
     
     foreach($con->query($query)as $row)
