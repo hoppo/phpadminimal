@@ -3,7 +3,9 @@
     //bring in the functions file to utilise all the useful stuff
     include 'functions.php';
     session_start();
+    //set session variables to reflect selections
     $_SESSION['database'] = $_GET['db'];
+    //table variable set to null as no table selected yet
     $_SESSION['table'] = null;
     if (isset($_GET['log_out'])) logOut();
 ?>
