@@ -3,6 +3,8 @@
     //bring in the functions file to utilise all the useful stuff
     include 'functions.php';
     session_start();
+    $_SESSION['database'] = $_GET['db'];
+    $_SESSION['table'] = null;
     if (isset($_GET['log_out'])) logOut();
 ?>
 <html>
@@ -32,7 +34,6 @@
 <?php
     
     include 'db_connect.php';
-    $_SESSION['database'] = $_GET['db'];
     
     $con = Database::connect('localhost',$_SESSION['database'],$_SESSION['username'],$_SESSION['password']);
     

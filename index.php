@@ -5,7 +5,9 @@
     //start a session to store variables
     session_start();
     if (isset($_GET['log_out'])) logOut();
-    
+    //set database and table variable to null as none selected yet
+    $_SESSION['database'] = null;
+    $_SESSION['table'] = null;
     //If no one is logged in, i.e. username and password are not set divert to login page to acquire login credentials
     if (!isset($_SESSION['username']) || !isset($_SESSION['password'])){
         header('Location: login.php');
