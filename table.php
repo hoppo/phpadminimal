@@ -20,8 +20,47 @@
     require($DOCUMENT_ROOT . "navbar.html");
 ?>
 
+<table class="table table-striped table-bordered table-condensed table-hover">
+<thead>
+<tr>
+</tr>
+</thead>
+<tbody>
+
 <?php
+    include 'db_connect.php';
+    //create database connection
+    $con = Database::connect('localhost',$_SESSION['database'],$_SESSION['username'],$_SESSION['password']);
+
     
+    //create mysql query
+    $query = ('SHOW COLUMNS FROM '.$_SESSION['table']);
+    foreach ($con->query($query) as $row)
+    {
+        echo '<td><b>'.$row[0].'</b></td>';
+    }
+    
+    $sth = $con->prepare('SELECT * FROM '.$_SESSION['table']);
+    $sth->execute();
+    
+    while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr>";
+        foreach($row as $value) {
+            echo "<td><input type='text' class='form-control' value={$value}></td>";
+            
+        }
+        echo "<td>";
+        echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
+        echo ' ';
+        echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
+        echo ' ';
+        echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
+        echo "</td>";
+        echo "</tr>";
+    }
+    
+    //disconnect from database
+    $con = Database::disconnect();
 ?>
 
 </tbody>
