@@ -33,8 +33,6 @@ List of tables
     foreach($con->query($query)as $row)
     {
         echo '<tr><td>';
-        echo 'id';
-        echo '</td><td>';
         echo '<a href="table.php?table='.$row[0].'">'.$row[0].'</a>';
         echo '</td></tr>';
     }
