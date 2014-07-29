@@ -9,7 +9,7 @@ Todo
 
 Create page (create a new record)
  
-Read page (inspect a selected record more closely)
+Tidy up Read page
 
 Update page (update a record)
 
