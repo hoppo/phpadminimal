@@ -46,15 +46,15 @@
     while($row = $sth->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
         foreach($row as $value) {
-            echo "<td><input type='text' class='form-control' value={$value}></td>";
+            echo "<td>{$value}</td>";
             
         }
         echo "<td>";
-        echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
+        echo '<a class="btn btn-xs" href="read.php?id='.$row['id'].'">Read</a>';
         echo ' ';
-        echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
+        echo '<a class="btn btn-success btn-xs" href="update.php?id='.$row['id'].'">Update</a>';
         echo ' ';
-        echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
+        echo '<a class="btn btn-danger btn-xs" href="delete.php?id='.$row['id'].'">Delete</a>';
         echo "</td>";
         echo "</tr>";
     }
