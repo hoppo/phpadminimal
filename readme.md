@@ -7,17 +7,13 @@ phpmyadmin but without all the features. Please feel free to clone, change, comm
 Todo
 ----
 
-Table page (display selected table)
-
 Create page (create a new record)
  
 Read page (inspect a selected record more closely)
 
 Update page (update a record)
 
-Add a nav bar displaying; username, selected database, selected table, logout. 
-
-Implement logout function.
+Delete page (delete a record with confirmation)
 
 Upgrade to secure php session.
 
